@@ -1,0 +1,22 @@
+services:
+  syncthing:
+    image: syncthing/syncthing:latest
+    container_name: syncthing
+    restart: unless-stopped
+    environment:
+      - PUID=1000
+      - PGID=1000
+    volumes:
+      - ./config:/var/syncthing/config
+      - ./data:/var/syncthing
+    ports:
+      - "127.0.0.1:8384:8384"     # Web UI (acesso local via SSH tunnel)
+      - "22000:22000/tcp"  # Sync protocol TCP
+      - "22000:22000/udp"  # Sync protocol UDP
+      #- "21027:21027/udp"  # Discovery local (opcional)
+    healthcheck:
+      test: curl -f http://localhost:8384
+      interval: 10m
+      timeout: 10s
+      retries: 3
+      start_period: 10s
