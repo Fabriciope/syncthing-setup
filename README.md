@@ -20,6 +20,7 @@ O [Syncthing](https://syncthing.net/) é um projeto open source que permite a si
 #### Desabilitar o discovery global (opcional, mais privado)
  Seguir caminho abaixo para realizar configuração:
  `Actions → Settings → Connections → desmarcar "Global Discovery"`
+ > OBS: Fazer isso somente na VPS, mas nos outros dispositivos mantém ativado — é o que permite que eles encontrem a VPS pelo IP fixo sem precisar configurar endereço manualmente em cada um.
  
 #### Pegar o Device ID da VPS
  Vá em `Actions → Settings → Connections → desmarcar "Global Discovery"` - copie esse ID, vai precisar em cada dispositivo para adicionar um dispositivo remoto.
