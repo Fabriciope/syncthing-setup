@@ -15,7 +15,7 @@ O [Syncthing](https://syncthing.net/) é um projeto open source que permite a si
 
 ### Configurando o Syncthing (via Web UI)
 #### Como acessar a interface web 
- Ao subir esse serviço em qualquer computador a porta `:8384` fica exposta localmente  na máquina para o acesso a interface web, mas no caso da VPS como essa porta está disponível somente localmente então para acessar é preciso de algum computador para que através dele consigamos entrar no painel do Syncthing da VPS, para isso precisamos rodar o comando [[Comando ssh com a flag -L|ssh com a flag `-L`]], que basicamente vai nos permitir acessar a porta 8384 da VPS localmente - *ao usar este comando utilize uma porta local que não seja a `:8384` (ex: `:8385`) para que não dê conflito com o Syncthing que estará rodando localmente*.
+ Ao subir esse serviço em qualquer computador a porta `:8384` fica exposta localmente  na máquina para o acesso a interface web, mas no caso da VPS como essa porta está disponível somente localmente então para acessar é preciso de algum computador para que através dele consigamos entrar no painel do Syncthing da VPS, para isso precisamos rodar o comando ssh com a flag `-L`, que basicamente vai nos permitir acessar a porta 8384 da VPS localmente - *ao usar este comando utilize uma porta local que não seja a `:8384` (ex: `:8385`) para que não dê conflito com o Syncthing que estará rodando localmente*.
  
 #### Desabilitar o discovery global (opcional, mais privado)
  Seguir caminho abaixo para realizar configuração:
